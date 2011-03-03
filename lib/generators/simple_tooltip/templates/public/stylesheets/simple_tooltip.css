@@ -1,0 +1,43 @@
+
+.simple-tooltip-help-icon {
+	text-decoration: none;
+/*	background-color: red; */
+/*
+	vertical-align: baseline;
+*/
+
+/*
+	border: 1px solid blue;
+
+	background:url(/images/tooltip_icon.png) top left no-repeat;
+	display: inline;
+	width: 16px;
+	height: 20px;
+*/
+}
+
+
+.simple-tooltip-help-icon>img {
+	vertical-align: middle;
+}
+
+.simple-tooltip-help-icon:hover {
+	background: none;
+}
+
+.simple-tooltip-close {
+	text-align: right;
+	border: 1px solid red;
+}
+
+#simple-tooltip {
+	position:   absolute;
+	border:     1px solid #333;
+	background: #ffffd8;
+	padding:    2px 5px;
+	color:      #000;
+	display:    none;
+	text-align: left;
+	border: 1px solid blue;
+}
+

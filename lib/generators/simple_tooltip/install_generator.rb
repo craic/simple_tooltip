@@ -11,16 +11,13 @@ module SimpleTooltip
       # rake, rakefile and route...
 
       def copy_stylesheet_and_images
-  #      STDERR.puts "** copy_stylesheet **"
-  #      copy_file "./public/stylesheets/simple_tooltip.css", "public/stylesheets/simple_tooltip.css"
-  #      copy_file "./public/images/simple_tooltip_help_icon.png",  "public/images/simple_tooltip_help_icon.png"
-  #      copy_file "./public/images/simple_tooltip_close_icon.png", "public/images/simple_tooltip_close_icon.png"
-
+        copy_file "./public/stylesheets/simple_tooltip.css", "public/stylesheets/simple_tooltip.css"
+        copy_file "./public/images/simple_tooltip_help_icon.png",  "public/images/simple_tooltip_help_icon.png"
+        copy_file "./public/images/simple_tooltip_close_icon.png", "public/images/simple_tooltip_close_icon.png"
       end
 
       def copy_javascript
-  #      STDERR.puts "** copy_javascript **"
-  #      copy_file "./public/javascripts/simple_tooltip.js", "public/javascripts/simple_tooltip.js"
+        copy_file "./public/javascripts/simple_tooltip.js", "public/javascripts/simple_tooltip.js"
       end
 
   #    def copy_migration
@@ -35,15 +32,11 @@ module SimpleTooltip
       # Add this multi line definition to the routes file
       def setup_route
 
-  #      STDERR.puts "** setup_route **"
-
-        route "resources :mytest"
-      
-  #      route "resources :simple_tooltips do\
-  #      collection do \
-  #        get 'tooltip_content' \
-  #      end \
-  #    end"
+        route "resources :simple_tooltips do\
+          collection do \
+            get 'tooltip_content' \
+          end \
+        end"
       end
 
     end

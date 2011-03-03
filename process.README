@@ -28,6 +28,8 @@ add dependencies on other gems
 
 3: Create generator directories and contents under lib/generators
 
+**** YOU MUST COMMIT YOUR CHANGES BEFORE rake install etc !!! ****
+
 
 4: package and install the gem
 
@@ -44,4 +46,19 @@ simple_tooltip 0.0.1 built to pkg/simple_tooltip-0.0.1.gem
 (initially specified an incorrect dependency (jquery_rails instead of jquery-rails) - that caused it to sit there for a fail then fail)
 
 
+In your Rails app...
 
+Add your gem to the Gemfile
+$ bundle install
+
+$ rails generate --help
+
+You should see your generator in there - if not then you might have a syntax error - something is 
+preventing it from loading...
+
+SimpleTooltip:
+  simple_tooltip:install
+
+
+**** start out with a minimal generator
+e.g. have it write something into the routes file...
