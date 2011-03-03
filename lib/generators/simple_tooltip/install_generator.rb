@@ -34,10 +34,12 @@ module SimpleTooltip
         files = Dir.glob("db/migrate/*create_simple_tooltips.rb").sort
         if files.length == 0
           copy_file src_file, "db/migrate/create_simple_tooltips.rb"
-#        elsif files.length == 1
-#          copy_file src_file, files[0]
         else
-          copy_file src_file, files.last
+          # delete the existing file
+          path = files.last
+          File.delete(path)
+          # copy the migration template into its place
+          copy_file src_file, path
         end
       end
   
@@ -47,13 +49,14 @@ module SimpleTooltip
   #    def copy_tests
   #    end
 
-      # Add this multi line definition to the routes file
+      # Add this multi line definition to the routes file - but only a single call to route
+      # otherwise they are placed in reverse line order!
       def setup_route
-        route "resources :simple_tooltips do"
-        route "             collection do"
-        route "               get 'tooltip_content'"
-        route "             end"
-        route "           end"
+        route "resources :simple_tooltips do\n" +
+              "             collection do\n" +
+              "               get 'tooltip_content'\n" +
+              "             end\n" +
+              "           end"
       end
 
     end
