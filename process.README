@@ -26,4 +26,22 @@ add dependencies on other gems
 
   s.add_development_dependency "rdiscount"
 
+3: Create generator directories and contents under lib/generators
+
+
+4: package and install the gem
+
+$ rake build
+(in /Users/jones/Documents/Craic/Code/Rails/gems/simple_tooltip)
+simple_tooltip 0.0.1 built to pkg/simple_tooltip-0.0.1.gem
+
+(fast)
+
+$ rake install
+(in /Users/jones/Documents/Craic/Code/Rails/gems/simple_tooltip)
+simple_tooltip 0.0.1 built to pkg/simple_tooltip-0.0.1.gem
+
+(initially specified an incorrect dependency (jquery_rails instead of jquery-rails) - that caused it to sit there for a fail then fail)
+
+
 
