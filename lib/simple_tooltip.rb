@@ -1,0 +1,3 @@
+module SimpleTooltip
+  # Your code goes here...
+end

@@ -1,0 +1,29 @@
+1: Use bundle to create a new gem directory - give it the name of the new gem
+
+$ bundle gem simple_tooltip
+      create  simple_tooltip/Gemfile
+      create  simple_tooltip/Rakefile
+      create  simple_tooltip/.gitignore
+      create  simple_tooltip/simple_tooltip.gemspec
+      create  simple_tooltip/lib/simple_tooltip.rb
+      create  simple_tooltip/lib/simple_tooltip/version.rb
+Initializating git repo in /Users/jones/Documents/Craic/Code/Rails/gems/simple_tooltip
+
+$ cd simple_tooltip/
+$ mate .
+
+2: Fill out relevant parts of the gemspec file
+
+  s.authors     = ["Robert Jones"]
+  s.email       = ["jones@craic.com"]
+  s.homepage    = "http://rubygems.org/gems/simple_tooltip"
+  s.summary     = %q{Creates and Displays Tooltip Help in Rails View pages}
+  s.description = %q{Creates and Displays Tooltip Help in Rails View pages.
+    Uses jQuery to display tooltips, with fallback if Javascript is not available.
+    Makes use of help text in the user's locale if available.'}
+
+add dependencies on other gems
+
+  s.add_development_dependency "rdiscount"
+
+
