@@ -45,11 +45,11 @@ SimpleTooltip is distributed as a Ruby Gem and is installed in an application vi
 
 1: Install the gem on your system
 
-`$ gem install simple-tooltip`
+	$ gem install simple-tooltip
 
 2: Within your Rails application, run the generator
 
-`$ rails generate simple_tooltip:install`
+	$ rails generate simple_tooltip:install
 
 (note the underscore in the generator name - this seems to be a requirement of the Rails generator machinery)
 
@@ -63,11 +63,11 @@ The generator creates the following items
 
 Add this line to your Gemfile and run `$ bundle install`
 
-`  gem 'simple-tooltip'`
+	gem 'simple-tooltip'
 
 4: Create the tooltips table in your database
 
-`  $ rake db:migrate`
+	$ rake db:migrate
 
 5: Include the JQuery file
 
@@ -75,7 +75,7 @@ Make sure you have the jQuery JavaScript library installed (via jquery-rails)'
 	$ rails generate jquery:install
 
 Then add this line to `app/views/layouts/application.html.erb` after other JavaScript files
-	<%= javascript_include_tag 'simple_tooltip.js' %>`
+	<%= javascript_include_tag 'simple_tooltip.js' %>
 
 The stylesheet should be included automatically.
 
@@ -87,8 +87,8 @@ Start your application and go to /tooltips/new
 
 For example:
 
-`  <%= tooltip('email format', :hover) %>`
-`  <%= tooltip('privacy agreement', :click) %>`
+	<%= tooltip('email format', :hover) %>
+	<%= tooltip('privacy agreement', :click) %>
 
 
 Usage
@@ -127,7 +127,7 @@ tooltip content is displayed.
 
 The jQuery JavaScript is found at `public/javascripts/simple_tooltip.js`. You should not need to modify this file.
 
-SimpleTooltip is written by ([http://github.com/craic](Rob Jones)) at ([http://craic.com](Craic Computing)) in Seattle. It is distributed freely under the MIT license.
+SimpleTooltip is written by [Rob Jones]http://github.com/craic at [Craic Computing]http://craic.com in Seattle. It is distributed freely under the MIT license.
 
 
 
