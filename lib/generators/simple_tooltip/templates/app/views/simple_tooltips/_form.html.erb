@@ -1,0 +1,36 @@
+<%= form_for(@simple_tooltip) do |f| %>
+  <% if @simple_tooltip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@simple_tooltip.errors.count, "error") %> prohibited this Tooltip from being saved:</h2>
+
+      <ul>
+      <% @simple_tooltip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :locale %><br />
+    <%= f.text_field :locale %> Use two letter ISO-639-1 code
+  </div>
+  <div class="field">
+    <%= f.label :markup %><br />
+    <%= f.radio_button :markup, 'html', :selected => true %> HTML / Plain Text &nbsp;
+    <%= f.radio_button :markup, 'markdown' %> Markdown
+(help on Markdown here)
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Listing Tooltips</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Locale</th>
+    <th>Markup</th>
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @simple_tooltips.each do |simple_tooltip| %>
+  <tr>
+    <td><%= simple_tooltip.title %></td>
+    <td><%= simple_tooltip.locale %></td>
+    <td><%= simple_tooltip.markup %></td>
+
+    <td><%= link_to 'Show', simple_tooltip %></td>
+    <td><%= link_to 'Edit', edit_simple_tooltip_path(simple_tooltip) %></td>
+    <td><%= link_to 'Destroy', simple_tooltip, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tooltip', new_simple_tooltip_path %>
