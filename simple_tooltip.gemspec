@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Robert Jones"]
   s.email       = ["jones@craic.com"]
-  s.homepage    = "http://rubygems.org/gems/simple_tooltip"
+  s.homepage    = "http://rubygems.org/gems/simple-tooltip"
   s.summary     = %q{Create and display Tooltip Help in view pages in Rails applications}
   s.description = %q{Create and display Tooltip Help in view pages in Rails applications.
     Uses jQuery to display tooltips, with fallback if Javascript is not available.
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "thor",  "~>0.14.4"
   s.add_development_dependency "bundler", "~> 1.0.0"
 
-  s.rubyforge_project = "simple_tooltip"
+  s.rubyforge_project = "simple-tooltip"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
