@@ -25,22 +25,25 @@ module SimpleTooltip
       end
 
       def copy_migration
-        # Migration file name is preceded by the date/time string
-        # So use generate to create it, get the generated name and replace the contents
-        generate(:migration, "create_simple_tooltips")
-        # Get the most recent migration file that matches
-        # 
-        src_file = "./db/migrate/create_simple_tooltips.rb"
-        files = Dir.glob("db/migrate/*create_simple_tooltips.rb").sort
-        if files.length == 0
-          copy_file src_file, "db/migrate/create_simple_tooltips.rb"
-        else
-          # delete the existing file
-          path = files.last
-          File.delete(path)
-          # copy the migration template into its place
-          copy_file src_file, path
-        end
+        # Migration file name is preceded by the date/time string - UTC timestamp Time.now.gmtime.strftime("%Y%m%d%H%M%S")
+        copy_file "./db/migrate/create_simple_tooltips.rb", 
+                  "db/migrate/#{Time.now.gmtime.strftime("%Y%m%d%H%M%S")}_create_simple_tooltips.rb"
+
+#        generate(:migration, "create_simple_tooltips")
+#        # Get the most recent migration file that matches
+#        # 
+#        src_file = "./db/migrate/create_simple_tooltips.rb"
+#        files = Dir.glob("db/migrate/*create_simple_tooltips.rb").sort
+#        if files.length == 0
+#          copy_file src_file, "db/migrate/create_simple_tooltips.rb"
+#        else
+#          # delete the existing file
+#          path = files.last
+#          File.delete(path)
+#          # copy the migration template into its place
+#          copy_file src_file, path
+#        end
+
       end
   
   #    def copy_mvc_files
