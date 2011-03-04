@@ -73,6 +73,12 @@ module SimpleTooltip
               "           end"
       end
 
+      # Output installation instructions for the user
+      def instructions
+        puts 'here is stdout'
+        STDERR.puts 'here is stderr'
+      end
+      
     end
   end
 end
