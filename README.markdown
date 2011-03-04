@@ -127,7 +127,7 @@ tooltip content is displayed.
 
 The jQuery JavaScript is found at `public/javascripts/simple_tooltip.js`. You should not need to modify this file.
 
-SimpleTooltip is written by [Rob Jones]http://github.com/craic at [Craic Computing]http://craic.com in Seattle. It is distributed freely under the MIT license.
+SimpleTooltip is written by [Rob Jones](http://github.com/craic "Rob Jones") at [Craic Computing](http://craic.com "Craic Computing") in Seattle. It is distributed freely under the MIT license.
 
 
 
