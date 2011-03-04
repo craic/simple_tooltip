@@ -3,7 +3,7 @@ class CreateSimpleTooltips < ActiveRecord::Migration
     create_table :simple_tooltips do |t|
       t.string   :title
       t.text     :content
-      t.string   :markup,     :default => "html"
+      t.string   :markup,     :default => "markdown"
       t.string   :locale
       t.timestamps
     end

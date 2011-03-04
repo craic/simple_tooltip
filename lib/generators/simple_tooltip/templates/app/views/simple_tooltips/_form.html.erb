@@ -25,9 +25,14 @@
   </div>
   <div class="field">
     <%= f.label :markup %><br />
-    <%= f.radio_button :markup, 'html', :selected => true %> HTML / Plain Text &nbsp;
-    <%= f.radio_button :markup, 'markdown' %> Markdown
-(help on Markdown here)
+    <%= f.radio_button :markup, 'markdown', :selected => true %> Markdown
+    <%= f.radio_button :markup, 'textile' %> Textile
+    <%= f.radio_button :markup, 'html' %> HTML / Plain Text &nbsp;
+<br/>
+<a href="http://en.wikipedia.org/wiki/Markdown">Markdown syntax</a>
+<br/>
+<a href="http://redcloth.org/textile">Textile syntax</a>
+
   </div>
 
   <div class="actions">

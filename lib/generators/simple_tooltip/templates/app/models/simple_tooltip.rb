@@ -12,8 +12,8 @@ class SimpleTooltip < ActiveRecord::Base
                       :allow_blank => true
 
   validates_inclusion_of  :markup,
-                          :in => %w{ html markdown },
-                          :message => 'must be one of html or markdown'
+                          :in => %w{ html markdown textile },
+                          :message => 'must be one of html, markdown or textile'
                           
   validate :validate_no_script_tags
 
@@ -53,6 +53,8 @@ class SimpleTooltip < ActiveRecord::Base
   def content_to_html
     if self.markup == 'markdown'
       RDiscount.new(self.content, :autolink).to_html
+    elsif self.markup == 'textile'
+      RedCloth.new(self.content).to_html
     else
       self.content
     end
