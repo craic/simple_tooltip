@@ -22,7 +22,7 @@ a version that matches the user's current locale.
 
 SimpleTooltip helps bridge the gap between short, fixed tooltips and full help pages. 
 
-Tooltips are displayed via a jQuery. They can be configured to appear transiently when a user hovers over a link icon,
+Tooltips are displayed via a [jQuery](http://jquery.com "jQuery"). They can be configured to appear transiently when a user hovers over a link icon,
 or to appear when the link icon is clicked, remaining until closed by a click within the tooltip.
 
 
@@ -35,7 +35,7 @@ Developers can customize the styling of the tooltip content via CSS definitions 
 Prerequisites
 =============
 
-The initial release of SimpleTooltip works Rails 3 and jQuery. It is not expected to work with Rails 2.
+The initial release of SimpleTooltip works [Rails](http://rubyonrails.org "Rails 3") and [jQuery](http://jquery.com "jQuery"). It is not expected to work with Rails 2.
 
 
 Installation
@@ -46,6 +46,8 @@ SimpleTooltip is distributed as a Ruby Gem and is installed in an application vi
 1: Install the gem on your system
 
 	$ gem install simple-tooltip
+
+The gem is hosted at [Ruby Gems](https://rubygems.org "Ruby Gems")
 
 2: Within your Rails application, run the generator
 
