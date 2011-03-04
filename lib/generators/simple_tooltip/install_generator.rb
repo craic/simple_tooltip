@@ -55,7 +55,7 @@ module SimpleTooltip
       def copy_tests
         path = "test/unit/simple_tooltip_test.rb"
         copy_file "./#{path}", path
-        path = "test/unit/helpers/simple_tooltip_helper_test.rb"
+        path = "test/unit/helpers/simple_tooltips_helper_test.rb"
         copy_file "./#{path}", path
         path = "test/fixtures/simple_tooltips.yml"
         copy_file "./#{path}", path
