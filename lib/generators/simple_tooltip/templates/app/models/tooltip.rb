@@ -1,5 +1,7 @@
 # encoding: UTF-8
 
+require 'rdiscount'
+
 class Tooltip < ActiveRecord::Base
 
   attr_accessible :title, :content, :markup, :locale
