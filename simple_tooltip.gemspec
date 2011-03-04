@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "simple_tooltip/version"
 
 Gem::Specification.new do |s|
-  s.name        = "simple_tooltip"
+  s.name        = "simple-tooltip"
   s.version     = SimpleTooltip::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Robert Jones"]

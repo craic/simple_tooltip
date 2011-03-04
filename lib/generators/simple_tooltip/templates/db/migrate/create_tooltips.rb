@@ -1,6 +1,6 @@
-class CreateSimpleTooltips < ActiveRecord::Migration
+class CreateTooltips < ActiveRecord::Migration
   def self.up
-    create_table :simple_tooltips do |t|
+    create_table :tooltips do |t|
       t.string   :title
       t.text     :content
       t.string   :markup,     :default => "markdown"
@@ -10,6 +10,6 @@ class CreateSimpleTooltips < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :simple_tooltips
+    drop_table :tooltips
   end
 end

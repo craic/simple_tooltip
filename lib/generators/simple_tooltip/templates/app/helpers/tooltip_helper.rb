@@ -1,8 +1,8 @@
-module SimpleTooltipHelper
+module TooltipHelper
 
   # tooltip helper for inclusion in views
   # TODO - allow a custom class to be passed - e.g. twitter style - look at poshy tip
-  def simple_tooltip(text='', mode=:hover)
+  def tooltip(text='', mode=:hover)
 
     return if text == ''
     
@@ -17,7 +17,7 @@ module SimpleTooltipHelper
     end
 
     link_to(image_tag(tooltip_help_icon_file), 
-            tooltip_content_simple_tooltips_path(:title => text),
+            tooltip_content_tooltips_path(:title => text),
             :name => text, :title => title, 
             :class => class_str)
   end

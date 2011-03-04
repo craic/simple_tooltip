@@ -1,10 +1,10 @@
-<%= form_for(@simple_tooltip) do |f| %>
-  <% if @simple_tooltip.errors.any? %>
+<%= form_for(@tooltip) do |f| %>
+  <% if @tooltip.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@simple_tooltip.errors.count, "error") %> prohibited this Tooltip from being saved:</h2>
+      <h2><%= pluralize(@tooltip.errors.count, "error") %> prohibited this Tooltip from being saved:</h2>
 
       <ul>
-      <% @simple_tooltip.errors.full_messages.each do |msg| %>
+      <% @tooltip.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

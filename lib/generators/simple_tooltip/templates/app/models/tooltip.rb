@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-class SimpleTooltip < ActiveRecord::Base
+class Tooltip < ActiveRecord::Base
 
   attr_accessible :title, :content, :markup, :locale
     
@@ -25,29 +25,29 @@ class SimpleTooltip < ActiveRecord::Base
   # find the tooltip that matches the title and locale
   def self.from_title_and_locale(title, user_locale = I18n.locale.to_s)
 
-    simple_tooltip = nil
-    tooltips = SimpleTooltip.where(:title => title).all
+    tooltip = nil
+    tooltips = Tooltip.where(:title => title).all
 
     if tooltips.count == 1
       # there is only one, so use that
-      simple_tooltip = tooltips.first
+      tooltip = tooltips.first
 
     elsif tooltips.count > 1
 
       # Try and match by locale
       default_tooltip = nil
-      tooltips.each do |tooltip|
-        if tooltip.locale == user_locale
-          simple_tooltip = tooltip
+      tooltips.each do |tooltip_i|
+        if tooltip_i.locale == user_locale
+          tooltip = tooltip_i
           break
-        elsif tooltip.locale.nil? or tooltip.locale == I18n.default_locale.to_s
-          default_tooltip = tooltip
+        elsif tooltip_i.locale.nil? or tooltip_i.locale == I18n.default_locale.to_s
+          default_tooltip = tooltip_i
         end
       end
-      simple_tooltip = default_tooltip if simple_tooltip.blank?
+      tooltip = default_tooltip if tooltip.blank?
     end
 
-    simple_tooltip
+    tooltip
   end
 
 
@@ -65,7 +65,7 @@ class SimpleTooltip < ActiveRecord::Base
   protected
   
   def validate_unique_title_locale_combination
-    if SimpleTooltip.where(:title => self.title).where(:locale => self.locale).count > 0
+    if Tooltip.where(:title => self.title).where(:locale => self.locale).count > 0
       errors.add(:title, 'and locale combination already exists')    
     end
   end

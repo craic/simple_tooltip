@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<% if @user_view %>
+
+  <%= raw(@tooltip.content_to_html) %>
+  <p><br/><%= link_to "Go Back", request.referer %></p>
+
+<% else %>
+<p>
+  <b>Title:</b>
+  <%= @tooltip.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= raw(@tooltip.content_to_html) %>
+</p>
+
+<p>
+  <b>Markup:</b>
+  <%= @tooltip.markup %>
+</p>
+
+<p>
+  <b>Locale:</b>
+  <%= @tooltip.locale %>
+</p>
+
+<%= link_to 'Edit', edit_tooltip_path(@tooltip) %> |
+<%= link_to 'Back', tooltips_path %>
+<% end %>
