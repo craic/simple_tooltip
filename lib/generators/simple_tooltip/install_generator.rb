@@ -75,8 +75,31 @@ module SimpleTooltip
 
       # Output installation instructions for the user
       def instructions
-        puts 'here is stdout'
-        STDERR.puts 'here is stderr'
+        puts '---------------------------------------------------------------'
+        puts 'To complete the installation...'
+        puts ''
+        puts '1: Make sure you have the jQuery JavaScript library installed'
+        puts '   via the jquery-rails gem'
+        puts '   $ rails generate jquery:install'
+        puts ''
+        puts '2: Check that these lines are in layouts/application.html.erb'
+        puts ''
+        puts '  <%= stylesheet_link_tag :all %>'
+        puts '  <%= javascript_include_tag :defaults %>'
+        puts ''
+        puts '3: Add this line after those two'
+        puts ''
+        puts "  <%= javascript_include_tag 'simple_tooltip.js' %>"
+        puts ''
+        puts '4: Create the simple_tooltips database table'
+        puts ''
+        puts "   $ rake db:migrate"
+        puts ''
+        puts '5: Create some tooltip entries in /simple_tooltips'
+        puts '   and add links to those entries in your views'
+        puts "   <%= simple_tooltip('tooltip title', :hover) %>"
+        puts ''
+        puts '---------------------------------------------------------------'
       end
       
     end
