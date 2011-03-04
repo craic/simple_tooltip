@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString_1
+  content: MyText
+  markup: html
+  locale: en
+two:
+  title: MyString_2
+  content: MyText
+  markup: html
+  locale: en
+
+en_locale:
+  title: locale_test
+  content: Hello
+  markup: html
+  locale: en
+
+es_locale:
+  title: locale_test
+  content: Hola
+  markup: html
+  locale: es
