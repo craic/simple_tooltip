@@ -1,3 +1,3 @@
-module SimpleTooltip
+module SimpleTooltipGenerator
   # Your code goes here...
 end

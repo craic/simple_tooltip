@@ -1,21 +1,7 @@
 
 .simple-tooltip-help-icon {
 	text-decoration: none;
-/*	background-color: red; */
-/*
-	vertical-align: baseline;
-*/
-
-/*
-	border: 1px solid blue;
-
-	background:url(/images/tooltip_icon.png) top left no-repeat;
-	display: inline;
-	width: 16px;
-	height: 20px;
-*/
 }
-
 
 .simple-tooltip-help-icon>img {
 	vertical-align: middle;
@@ -27,7 +13,6 @@
 
 .simple-tooltip-close {
 	text-align: right;
-	border: 1px solid red;
 }
 
 #simple-tooltip {
@@ -38,6 +23,5 @@
 	color:      #000;
 	display:    none;
 	text-align: left;
-	border: 1px solid blue;
 }
 
