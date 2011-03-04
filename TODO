@@ -1,0 +1,13 @@
+March 2011 - initial release
+
+- add instructions to README on adding tooltip links on static pages - explicit HTML
+
+- add an action that clones an existing tooltip with an alternate locale
+
+- include link to Google Translate to facilitate creation of tooltips in 
+  alternate locales
+
+- improve the styling of the tooltip popups - either directly with 'themes' or
+  through incorporating jQuery tooltip/popup plugins
+
+
