@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class SimpleTooltip < ActiveRecord::Base
 
   attr_accessible :title, :content, :markup, :locale
