@@ -1,7 +1,7 @@
-SimpleTooltip
-=============
+Simple Tooltip
+==============
 
-Simple and flexible Tooltip Help for Rails applications
+Simple and flexible Tooltip Help for Rails 3 applications
 
 There are many JavaScript plugins that provide basic tooltip (popup) help for web pages. These work by including the 
 text of the help message directly in the content of each page.
@@ -12,6 +12,8 @@ text is required. For example, the help message might require a link to an exter
 With Simple Tooltip you create tooltip help content in a web form and record it in the database via a Tooltip model.
 Content can be created in plain text, HTML, Markdown and Textile, allowing tooltips to use the
 full features of HTML, including links, CSS styling, etc.
+
+Take a look at the [Demo Site]("http://simple-tooltip-demo.craic.com" 'Demo site') to see it in action.
 
 Tooltip links, typically small icons, are placed in your views with calls to a simple helper method that refer 
 to the related content by title.
