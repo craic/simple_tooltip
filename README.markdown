@@ -13,7 +13,7 @@ With Simple Tooltip you create tooltip help content in a web form and record it 
 Content can be created in plain text, HTML, Markdown and Textile, allowing tooltips to use the
 full features of HTML, including links, CSS styling, etc.
 
-Take a look at the [Demo Site]("http://simple-tooltip-demo.craic.com" 'Demo site') to see it in action.
+Take a look at the [Demo Site](http://simple-tooltip-demo.craic.com 'Demo site') to see it in action.
 
 Tooltip links, typically small icons, are placed in your views with calls to a simple helper method that refer 
 to the related content by title.
