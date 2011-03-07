@@ -129,6 +129,27 @@ tooltip content is displayed.
 
 The jQuery JavaScript is found at `public/javascripts/simple_tooltip.js`. You should not need to modify this file.
 
+
+Internationaliztion
+===================
+
+Simple Tooltip helps you provide help in multiple languages. Rails itself provides extensive support through the <a href="http://guides.rubyonrails.org/i18n.html">I18n functions</a>, but this mostly targets short text strings, such as 
+labels for form fields, standard error messages, etc.
+
+To support multiple languages in Simple Tooltip, you create multiple Tooltip database records with the same Title but 
+different Locales (specified in ISO-639-1 Two letter format, e.g. 'de').
+
+The code uses the value of I18n.locale as defined by your application, and defaults to I18n.default_locale. If it can find
+a version of the tooltip that matches the user's locale then it will use it. 
+
+If you don't want to use internationalization then don't worry about it. Just leave the 'locale' field blank in the tooltip form.
+
+While this mechanism is separate from the Rails I18n approach, I think it offers some advantages when you want to create 
+large blocks of help text.
+
+Author
+======
+
 Simple Tooltip is written by [Rob Jones](http://github.com/craic "Rob Jones") at [Craic Computing](http://craic.com "Craic Computing") in Seattle. It is distributed freely under the MIT license.
 
 
