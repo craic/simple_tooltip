@@ -5,6 +5,7 @@
 
 .simple-tooltip-help-icon>img {
 	vertical-align: middle;
+	border: none;
 }
 
 .simple-tooltip-help-icon:hover {

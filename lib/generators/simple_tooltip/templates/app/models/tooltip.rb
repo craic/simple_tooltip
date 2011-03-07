@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
 require 'rdiscount'
+require 'RedCloth'
 
 class Tooltip < ActiveRecord::Base
 
@@ -24,9 +25,8 @@ class Tooltip < ActiveRecord::Base
   validate :validate_unique_title_locale_combination, :on => :create
 
 
-  # find the tooltip that matches the title and locale
+  # find the tooltip that matches the title and locale - locale is a string
   def self.from_title_and_locale(title, user_locale = I18n.locale.to_s)
-
     tooltip = nil
     tooltips = Tooltip.where(:title => title).all
 
@@ -35,7 +35,6 @@ class Tooltip < ActiveRecord::Base
       tooltip = tooltips.first
 
     elsif tooltips.count > 1
-
       # Try and match by locale
       default_tooltip = nil
       tooltips.each do |tooltip_i|

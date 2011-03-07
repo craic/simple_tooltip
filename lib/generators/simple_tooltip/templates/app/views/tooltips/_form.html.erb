@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :content %><br />
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :rows => 10, :cols => 70  %>
   </div>
   <div class="field">
     <%= f.label :locale %><br />
-    <%= f.text_field :locale %> Use two letter ISO-639-1 code
+    <%= f.text_field :locale, :size => 5 %> Use two letter ISO-639-1 code (e.g. en, de, etc)
   </div>
   <div class="field">
     <%= f.label :markup %><br />
@@ -29,9 +29,11 @@
     <%= f.radio_button :markup, 'textile' %> Textile
     <%= f.radio_button :markup, 'html' %> HTML / Plain Text &nbsp;
 <br/>
-<a href="http://en.wikipedia.org/wiki/Markdown">Markdown syntax</a>
+<p>
+<a href="http://en.wikipedia.org/wiki/Markdown">Markdown syntax reference</a>
 <br/>
-<a href="http://redcloth.org/textile">Textile syntax</a>
+<a href="http://redcloth.org/textile">Textile syntax reference</a>
+</p>
 
   </div>
 

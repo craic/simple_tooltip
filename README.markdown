@@ -9,7 +9,7 @@ text of the help message directly in the content of each page.
 But this approach fails when the information requires more than one paragraph and when more than plain
 text is required. For example, the help message might require a link to an external web site.
 
-With SimpleTooltip you create tooltip help content in a web form and record it in the database via a Tooltip model.
+With Simple Tooltip you create tooltip help content in a web form and record it in the database via a Tooltip model.
 Content can be created in plain text, HTML, Markdown and Textile, allowing tooltips to use the
 full features of HTML, including links, CSS styling, etc.
 
@@ -20,9 +20,9 @@ Tooltip records include a locale column that defines the language used for their
 be created with the same title but different locales. When a given title is requested, the code tries to find
 a version that matches the user's current locale.
 
-SimpleTooltip helps bridge the gap between short, fixed tooltips and full help pages. 
+Simple Tooltip helps bridge the gap between short, fixed tooltips and full help pages. 
 
-Tooltips are displayed via a [jQuery](http://jquery.com "jQuery"). They can be configured to appear transiently when a user hovers over a link icon,
+Tooltips are displayed via [jQuery](http://jquery.com "jQuery") script. They can be configured to appear transiently when a user hovers over a link icon,
 or to appear when the link icon is clicked, remaining until closed by a click within the tooltip.
 
 
@@ -35,13 +35,13 @@ Developers can customize the styling of the tooltip content via CSS definitions 
 Prerequisites
 =============
 
-The initial release of SimpleTooltip works [Rails](http://rubyonrails.org "Rails 3") and [jQuery](http://jquery.com "jQuery"). It is not expected to work with Rails 2.
+The initial release of Simple Tooltip works with [Rails 3](http://rubyonrails.org "Rails 3") and [jQuery](http://jquery.com "jQuery"). It is not expected to work with Rails 2.
 
 
 Installation
 ============
 
-SimpleTooltip is distributed as a Ruby Gem and is installed in an application via a Rails generator.
+Simple Tooltip is distributed as a Ruby Gem and is installed in an application via a Rails generator.
 
 1: Install the gem on your system
 
@@ -129,7 +129,7 @@ tooltip content is displayed.
 
 The jQuery JavaScript is found at `public/javascripts/simple_tooltip.js`. You should not need to modify this file.
 
-SimpleTooltip is written by [Rob Jones](http://github.com/craic "Rob Jones") at [Craic Computing](http://craic.com "Craic Computing") in Seattle. It is distributed freely under the MIT license.
+Simple Tooltip is written by [Rob Jones](http://github.com/craic "Rob Jones") at [Craic Computing](http://craic.com "Craic Computing") in Seattle. It is distributed freely under the MIT license.
 
 
 

@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.homepage    = "http://rubygems.org/gems/simple-tooltip"
   s.summary     = %q{Create and display Tooltip Help in view pages in Rails applications}
   s.description = %q{Create and display Tooltip Help in view pages in Rails applications.
-    Uses jQuery to display tooltips, with fallback if Javascript is not available.
-    Makes use of help text in the user's locale if available.'}
+    Uses jQuery to display tooltips, with html fallback if JavaScript is not available.
+    Makes use of help text in the user's locale if available.}
 
 
   s.add_dependency "rails", "~> 3.0"

@@ -15,9 +15,11 @@ module TooltipHelper
     else
       title = text
     end
-
+    # Add the locale to the class string - e.g. locale_de
+    class_str << " locale_#{I18n.locale.to_s}"
+    
     link_to(image_tag(tooltip_help_icon_file), 
-            tooltip_content_tooltips_path(:title => text),
+            tooltip_content_tooltips_path(:title => text, :locale => I18n.locale.to_s),
             :name => text, :title => title, 
             :class => class_str)
   end
